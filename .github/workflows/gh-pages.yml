@@ -30,3 +30,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+      - name: Configure Git
+        run: |
+          git config --global user.email "bimawa@gmail.com"
+          git config --global user.name "bimawa"
