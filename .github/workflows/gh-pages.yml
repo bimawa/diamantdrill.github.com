@@ -10,6 +10,10 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
+      - name: Configure Git
+        run: |
+          git config --global user.email "bimawa@gmail.com"
+          git config --global user.name "bimawa"
       - uses: actions/checkout@v3
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
