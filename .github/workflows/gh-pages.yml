@@ -10,17 +10,13 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
-      - name: Configure Git
-        run: |
-          git config --global user.email "bimawa@gmail.com"
-          git config --global user.name "bimawa"
       - uses: actions/checkout@v3
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Hugo setup
-        uses: peaceiris/actions-hugo@v2.4.13
+        uses: peaceiris/actions-hugo@v2.6.0
         with:
           hugo-version: 'latest'
           extended: true
