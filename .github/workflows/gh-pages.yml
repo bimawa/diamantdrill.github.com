@@ -15,10 +15,8 @@ jobs:
       with:
         ref: main
 
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: 'latest'
+    - name: Hugo Deploy GitHub Pages
+      uses: benmatselby/hugo-deploy-gh-pages@v2.1.0
 
     - name: Build
       run: hugo --minify
